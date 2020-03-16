@@ -1,0 +1,130 @@
+@charset "utf-8";    
+
+*{ font-family:'Malgun Gothic', sans-serif;}
+html,body,p, input, select, form, label, mark, ul, ul li, ol, ol li, dl, dl dt, dl dd, img, a, table, h1, h2, h3, h4, h5{margin:0;padding:0;}
+img{ border:0; height:auto; width: 100%} 
+ul, ol{ list-style:none; }
+
+.wrap {width:100%; overflow:hidden;} 
+.header {width:100%; position:relative; margin-bottom:-4px;}
+.title img {position: absolute; top:15px; left: 10px; width:70px; }
+.title h1 {background-color:#733896; color:#fff; font-size:26px; font-weight: 600; text-align: center; letter-spacing: -1.5px; padding:40px 0 15px 0; box-shadow: 0 2px 5px #999;}
+.title-no-shadow {box-shadow:none !important;}
+.title h1 span {color: #fdec46;}
+
+.s-title {text-align: center; color:#6b2f90; font-size: 15px; padding:15px 0; letter-spacing: -0.5px; background-color: #fff; }
+.s-title span {font-size: 17px; color:#6b2f90; font-weight: 700; letter-spacing: -1px; }
+
+.container {background-color:#402b53;}
+.container .main {padding: 15px 15px 25px 15px; background-color:#402b53;}
+.step1 {height: 100px; border-bottom: 1px solid #7a6b87; text-align: center; display: table-cell; vertical-align: middle; background-color:#402b53;}
+.step1 img {width:65%}
+.container h3 {font-size: 17px; color: #fff; font-weight: 600; padding-top:5px;}
+.container h4 {font-size: 14px; color: #c6becd; font-weight: 600; margin:10px 0 5px 0;}
+
+/* 임직원 이메일 인증 */
+.agree-box {font-size: 12px; background-color: #fff; color:#402b53; line-height: 16px; padding: 10px;}
+.formck {padding-top: 5px; position: relative;}
+.formck span {font-size: 12px; color: #fff;}
+.formck .btn-small {position: absolute; right: 0; font-size: 12px; background:#2e1743; border-radius: 3px; color: #fff; padding: 3px 15px 5px; text-decoration: none;}
+.confirm {display: flex; justify-content: space-between;}
+.mymail select, .mymail select option, .mymail input {width: 100%; background-color: #402b53; border: 1px solid #baafc4; border-radius: 3px; color: #c6becd; font-size:13px; height: 30px;  padding: 0 5px;}
+.mymail-input {display: flex; justify-content: space-between; margin-top: 7px;}
+.mymail-input input:first-child {width: 70%; margin-right: 5px; font-weight: 500; color: #fff;}
+.check-navy-bg {background-color: #271439; padding: 25px 0 35px 0; text-align: center;}
+.thank {width:80%; background-color: #2c1742; text-align: center; margin: 0 auto; padding: 15px 15px 30px 15px;}
+.thank .thank-bg {font-size:17px; font-weight: normal; color:#80748e; letter-spacing: 5px;}
+.thank p {color:#fff; font-size:14px; margin-top: 10px; letter-spacing: -1px;}
+.thank p span {color:#fff000; letter-spacing:0;}
+
+/* 이용약관, 회사명 검색 - Layer */
+#agreePopupDiv, #officePopupDiv {position:relative; width:100%; height:100%; position:fixed; background:rgba(0,0,0,0.7); top:0; left:0; z-index:999;}
+.agree-layer {position:relative; width: 75%; background-color: #fff; padding: 10px; margin: 30% auto;}
+.agree-layer .box {overflow-y: auto; height: 360px; background-color: #fff; padding: 10px; font-size: 12px; color: #555; border: 1px solid #bbb;}
+.agree-layer img {position: absolute; right:10px; top:7px; width: 16px; margin: 3px;}
+.agree-layer h5 {margin-bottom:7px; }
+
+.office-sch-layer {position: absolute; bottom: 0; background-color: #fff;}
+.office-sch-layer img {position: absolute; right:10px; top:7px; width: 16px; margin: 3px;}
+.office-sch {text-align: center; padding-bottom: 30px; border-bottom: 1px solid #c6becd;}
+.office-sch h5 {font-size: 20px; color: #402b53; font-weight: 600; padding: 25px 0 12px 0;}
+.office-sch input {width:80%; border: 2px solid #733896; border-radius: 5px; font-size: 16px; font-weight: 600; color:#181818; height: 34px; padding: 2px 15px; }
+.office-result {min-height:250px; background-color: #f3f0f7; padding: 20px 15px 30px 25px;}
+.office-result p {font-size: 12px; color: #555; text-align: right;}
+.office-result ul {margin-top: 25px; overflow:hidden;}
+.office-result li {width:40%; float: left; margin: 0 25px 30px 0;}
+.office-result li a {font-size: 15px; color: #6b2f90; font-weight: 600; text-decoration: none; display: block;}
+.office-result li a span {display: block; font-weight: normal; color: #555;}
+.office-sch .sch-box {position: relative; width:80%; margin: 0 auto;}
+.sch-box button {display: block; border: none; background: url("../images/ico_search.png") no-repeat 0 center; width:34px; height: 34px; position: absolute; top:4px; right: 22px;}
+
+/* 회원정보 입력 */
+.step2 {height: 100px; text-align: center; display: table-cell; vertical-align: middle; background-color: #fff;}
+.step2 img {width:65%}
+.myinfo {background-color:#f3f0f3; padding: 20px;}
+.check-white-bg {background-color: #fff; padding: 25px 0 35px 0; text-align: center;}
+.myinfo h2 {font-size: 18px; font-weight: 600; color:#402b53; text-align: center; margin-bottom: 15px;}
+.myinfo p {font-size: 12px; color:#555; margin: 7px 0;}
+.myinfo p span {color: #b3194f;}
+.myinfo input, .myinfo select {border: 1px solid #aaa; border-radius: 3px; height: 24px; font-size: 13px; color: #181818; padding: 2px 6px; margin-bottom: 6px; background-color: #fff;}
+.myinfo select {height: 30px;}
+.info-1 input:first-child, .info-2 input, .info-4 input {width: 96%;}
+.info-3 {display: flex; justify-content: space-between; color: #555;}
+
+/* 가입 완료 */
+.card {background-color: #fff; text-align: center; padding-bottom: 25px;}
+.card img {width: 55%;}
+.card .a1-number {color: #6b2f90; font-weight: 700; padding: 15px 0 7px 0;}
+.app {border: 1px solid #ccc; background-color: #fff; padding: 15px 8px; overflow: auto; text-align: center;}
+/* .app ul {display: flex; justify-content: space-between; text-align: center;} */
+.app ul {display: inline-block;}
+.app ul li {float: left; padding: 0 10px;}
+.app li a {font-size: 12px; text-decoration-line: none; color: #181818; display: block; }
+.app li img {width:43px; display: block; margin: 0 auto; padding-bottom: 5px;}
+
+/* 기존 회원 */
+.member-info {color: #fff; padding: 15px 25px; background-color: #402b53;}
+.member-info h2 {font-size:20px; padding: 10px 0;}
+.member-info p {font-size: 13px; padding-bottom: 5px;}
+.a1-number {font-size: 15px;}
+.a1-number li {padding: 5px 0;}
+.a1-number input {background-color: #361f4b; border: 1px solid #7a6b87; border-radius: 3px; height: 24px; font-size: 14px; color:#baafc4; font-weight: 600; margin: 2px; padding: 2px 6px; text-align: center;}
+.a1-number li span {display: flex; justify-content: space-between; margin-top: 7px;}
+.a1-number li span input {width: 20%;}
+
+/* 인천공항 */
+.ICN-step1 {border-bottom: 1px solid #7a6b87; text-align: center; display: table-cell; vertical-align: middle; background-color:#402b53;}
+.ICN-step1 img {width:85%; margin:4% 0}
+.office-name select {width: 98%; height: 26px; background-color: #fff; border: 1px solid #271439; border-radius: 3px; font-size: 13px; color: #402b53; padding: 2px 0 4px 5px; margin: 7px 0; }
+.con_email select {width: 48%; height: 26px; background-color: #fff; border: 1px solid #271439; border-radius: 3px; font-size: 13px; color: #402b53; padding: 2px 0 4px 5px; margin: 7px 0; }
+.con_email input {width: 48%; height: 19px; background-color: #fff; border: 1px solid #271439; border-radius: 3px; font-size: 13px; color: #402b53; padding: 2px 0 4px 5px; margin: 7px 0; }
+.thank img {padding-top: 20px;}
+.info-4 {display: flex; justify-content: space-between; font-size: 13px; color: #555;}
+
+/* 버튼 스타일 */
+.btn-white {width:100%; background-color: #fff; border-radius: 3px; border: 2px solid #2e1743; font-size: 13px; color: #2e1743; line-height: 12px; font-weight: 600; text-align: center; height: 34px;}
+.btn-white:first-child {margin-right: 8px;}
+.btn-yellow {background-color: #fff000; border-radius: 3px; border: none; font-size: 14px; font-weight: 600; color: #271439; height: 38px; padding: 0 30px; margin: 0 10px;}
+.btn-navy {background-color:#2c1742; border-radius: 3px; border: none; font-size: 14px; font-weight: 600; color: #fff; height: 38px; padding: 0 30px; margin: 0 10px;}
+.btn-gray {background-color:#7d7d7d; border-radius: 3px; border: none; font-size: 14px; font-weight: 600; color: #fff; height: 38px; padding: 0 30px; margin: 0 10px;}
+.btn-violet {background-color:#462d5c; border-radius: 3px; border: none; font-size: 14px; font-weight: 600; color: #fff; height: 30px; padding: 0 16px; margin-right: -3px;}
+
+/* 공통 */
+.noborder-bottom {border-bottom: none;}
+.bt01{border-bottom: 1px solid #c6becd;}
+.pb40 {padding-bottom: 40px;}
+.pb20 {padding-bottom: 20px;}
+.pt20 {padding-top: 20px;}
+.ml5 {margin-left: 5px;}
+.mb10 {margin-bottom: 10px;}
+.mb20 {margin-bottom: 20px;}
+.mp01 {margin: 0 -5px; padding: 5px 15px 10px 12px;}
+.w26 {width: 26%;}
+.w60 {width: 60%;}
+.w95 {width: 96% !important;}
+.float-r {float: right;}
+.clear {clear: both;}
+.bg-white {background-color: #fff;}
+.bg-violet {background-color:#402b53;}
+.bg-navy {background-color:#271439;}
+.txt-small {font-size: 12px !important; color: #baafc4 !important;}

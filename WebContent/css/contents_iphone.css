@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* footer */
+.wrap .footer_con .footer_icon {overflow: hidden; margin-top: 29px; border-top: 2px solid #e6e6e6; border-bottom: 2px solid #e6e6e6;}
+.wrap .footer_con .footer_icon > li {float: left; width: 189px; background: url("/image/main/include/footer_right_line.png") no-repeat right; height: 51px; display: table;}
+.wrap .footer_con .footer_icon > li:last-child {background: none;}
+.wrap .footer_con .footer_icon > li a {display: table-cell; vertical-align: middle;}
+.wrap .footer_con .footer_icon > li p {text-align: center; font-weight: bold; font-size: 22px; display: table-cell; vertical-align: middle;}
+.wrap .footer_con .footer_txt { margin-top: 40px;}
+.wrap .footer_con .footer_txt > p {text-align: center; font-size: 13px !important; color: #818282; letter-spacing: -0.03em; line-height: 1.2em;}
+
+.wrap .footer_con {clear:both; padding: 40px 30px 21px 30px; border-top: 2px solid #8f8f8f;}
+.wrap .footer_con .footer_top {overflow: hidden;}
+.wrap .footer_con .footer_top .footer_top_left {float: left; margin-left: 22px;}
+.wrap .footer_con .footer_top .footer_top_right {float: right; width: 283px; height: 50px; border:2px solid #b9b9b9; overflow: hidden;}
+.wrap .footer_con .footer_top .footer_top_right > select {background: transparent; width: 200px; height: 50px;  font-size: 26px; color: #333333; border: 0; -webkit-appearance: none;}
+.wrap .footer_con .footer_top .footer_top_right .web_input {width: 80px; background: transparent; height: 50px;  float: right; border: none; border-left: 2px solid #b9b9b9; color: #7d7d7d; }
+
+
+/* 갤러리 */
+#sub_wrap .gallery_area {margin: 20px 30px; position: relative; }
+#sub_wrap .gallery_area .gallery_con {overflow: hidden; margin-bottom: 98px; }
+#sub_wrap .gallery_area .gallery_con > li {float: left;}
+/*#sub_wrap .gallery_area .gallery_popup {position: absolute; display: none; }*/
+#sub_wrap .gallery_area .gallery_popup {background: url("/image/brand/popup_dim.png") repeat; position: fixed; z-index: 1000; width: 640px; height: 100%; margin: -180px -30px; display: none;}
+#sub_wrap .gallery_area .gallery_popup > p {width: 580px; margin: 0 auto; margin-top: 14%; overflow: hidden; margin-left: 30px;}
+#sub_wrap .gallery_area .gallery_popup .view_btn_con .view_btn_close {position: absolute; top: 103px; right: 43px; }
+#sub_wrap .gallery_area .gallery_popup .view_btn_con .view_btn_prev {position: absolute; top: 358px; left: 28px; padding: 25px 25px 25px 11px;}
+#sub_wrap .gallery_area .gallery_popup .view_btn_con .view_btn_next {position: absolute; top: 358px; right: 28px; padding: 25px 11px 25px 25px; }
+body.noscroll {position: fixed; overflow-y: scroll; width: 100%;}

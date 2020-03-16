@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* 1. Webfont *******************************/
+@font-face {font-family:"NanumGothic";
+	src:url('/fonts/NanumGothic.eot');
+	src:url('/fonts/NanumGothic.eot?#iefix') format('embedded-opentype'), 
+	url('/fonts/NanumGothic.ttf') format('truetype'), 
+	url('/fonts/NanumGothic.svg#NanumGothic') format('svg');
+	src:local(※), url('/fonts/NanumGothic.woff') format('woff');
+	font-family:"NanumGothicB";
+	src:url('/fonts/NanumGothicBold.eot');
+	src:url('/fonts/NanumGothicBold.eot?#iefix') format('embedded-opentype'), 
+	url('/fonts/NanumGothicBold.ttf') format('truetype'), 
+	url('/fonts/NanumGothicBold.svg#NanumGothicBold') format('svg');
+	src:local(※), url('/fonts/NanumGothicBold.woff') format('woff');}
+
+/* 2. Default Reset *******************************/
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var,b, i, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, figcaption, figure,footer, header, menu, nav, section, summary,time, mark, audio, video  {margin:0; padding:0; border:0; -webkit-margin-before:0; -webkit-margin-after:0; -webkit-margin-start:0; -webkit-margin-end:0;}
+body {padding:0; margin:0; background:#fff; color:#222; font-family:"NanumGothic", Arial, sans-serif; font-size:15px; -webkit-text-size-adjust:none;}
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal; font-family:"NanumGothic",Tahoma,Arial,sans-serif; vertical-align:middle;}
+ul, ol {list-style:none;}
+em, address {font-style:normal;}
+hr {display:none;}
+img {border:0 none; vertical-align:top;}
+a, a:hover, a:focus, a:active {color:#333; cursor:pointer; text-decoration:none;}
+fieldset, fieldset a>img,fieldset label,fieldset select,fieldset input,table td a>img,table td label,table td select,table td input,input[type="checkbox"],input[type="radio"] {vertical-align:middle;}
+form, fieldset, legend, label, input[type="image"], input[type="radio"], input[type="checkbox"] {border:0 none;}
+fieldset {border:0 none;}
+legend, caption
+button, input, select, textarea, .input-info-label {font-family:"NanumGothic", Arial, sans-serif; font-size:1em; line-height:normal;}
+fieldset a > img, fieldset label, fieldset select, fieldset input, table td a > img, table td label, table td input, input[type="checkbox"], input[type="radio"] {vertical-align:middle;}
+button, input[type="btn"], input[type="reset"], input[type="submit"], input[type="image"] {cursor:pointer; vertical-align:middle;}
+button [disabled] {cursor:default;}
+.clearfix:after, .clearfix:before {display:block; overflow:hidden; clear:both; content:'';}
+.none, hr, legend, caption {display:none;}
+.hide {position:absolute !important; overflow:hidden; visibility:hidden; width:0 !important; height:0 !important; font:0/0 m !important; padding:0 !important; margin:0 !important;}
+.ellipsis {display:inline-block; overflow:hidden; width:100%; white-space:nowrap; text-overflow:ellipsis;}
+
+/*layout*/
+.wrap {width:960px; height:100%; position:relative;}
+.header{width:960px; margin:0 auto;position: relative; text-align:center;} 
+
+.tit2 {margin:20px 0 35px 0;}
+.step1 {width:960px; background:#402b53; padding-top:45px; text-align:center; margin:0 auto; position:relative;}
+.step1 h2 {font-size:26px; font-weight:600; color:#FFF; text-align:left; padding:35px 0 0 46px; }
+.step1 h3 {font-size:20px; font-weight:600; color:#cbc2d3; margin-bottom:25px; }
+.step1 .box {width:800px; height:210px; text-align:left; padding:30px; background-color:#FFF; font-size:15px; line-height:22px; overflow-y:auto; margin:0 auto;}
+.agree .select {padding-top:20px; margin-bottom:45px;}
+.agree .select .radio {color:#FFF; font-size:16px; margin:0 50px;}
+.button {display:block; line-height:normal; padding-top:13px;}
+.button .bt_w {border-radius:6px; color:#4c0e75; font-size:19px; font-weight:600; background:#ffffff; padding:18px 90px; text-decoration: none; margin:30px 20px;}
+.button .bt_y {border-radius:6px; color:#2b1242; font-size:19px; font-weight:600; background:#fff000; padding:20px 40px; text-decoration: none; margin:30px 20px;}
+.mymail {display: flex; justify-content:center; padding-bottom: 40px;}
+.mymail input{background:transparent; border:solid 1px rgba(255, 255, 255, 0.4); border-radius:6px; font-size:16px; color:#f3f0f3; display:block; padding:12px; margin-right:20px; width:250px;}
+.mymail select{background:#402b53; border:solid 1px rgba(255, 255, 255, 0.4); border-radius:6px; font-size:16px; color:#f3f0f3; display:block; padding:12px; margin-right:20px;	width:250px;}
+.navy_fld {background:#26113b; height:120px; padding-top: 60px; width: 960px; margin: 0 auto;}
+.thanks {background:#2c1742; width:760px; padding:50px; text-align:center; font-size:24px; color:#FFF; line-height:37px; margin:0 auto;}
+
+.step2 {width:960px; padding-top:45px; text-align:center; border-top:1px solid #d8d8d8; margin:0 auto; padding-bottom: 50px;}
+.member_box {background-color:#f3f0f3; border: 2px solid #e0e0e0; text-align: left; padding: 35px 70px; margin: 40px 0 40px 0;}
+.member_box h2 {font-size: 27px; color: #2c1742; font-weight: bold; margin-bottom: 15px;}
+.member_box p {margin: 15px 0; font-weight: normal; clear: both; }
+.member_box p span {color:#b20e47; font-weight: 600;}
+.member_box input, .member_box select {border:solid 1px #bbb; border-radius:6px; font-size:16px; color:#777; display:block; padding:12px; margin-right:10px; margin-bottom: 10px;}
+.button .bt_v {border-radius:6px; color:#fff; font-size:18px; background:#2b1242; padding:13px 90px; text-decoration: none;}
+.button .bt_n {border-radius:6px; background: #26113b; font-size: 22px; color: #fff; font-weight: 600; padding:20px 60px; margin: 20px;} 
+.button .bt_g {border-radius:6px; background: #333; font-size: 22px; color: #fff; font-weight: 600; padding:20px 60px; margin: 20px;} 
+
+.card, .app {width: 800px; margin: 0 auto; background-color: #fff; }
+.card {padding-top: 50px; height: 300px;}
+.app {border: 1px solid #ccc; padding: 30px; clear: both; text-align: center; margin-bottom: 40px;}
+.code p {font-size:26px; font-weight: bold; color:#4c0e75; text-align: center; margin-top: 40px;}
+.txt_a1_ok {font-size: 32px; color: #5c168b; font-weight: bold; line-height: 44px; padding: 25px 0;}
+.card_ok {background-color: #fff; width: 860px; margin: 0 auto; margin-top: 35px; padding-bottom: 45px;}
+.card p {font-size: 24px; color: #4c0e75; font-weight: bold; margin-bottom: 25px;}
+.app2 {width: 740px; border: 1px solid #ccc; padding: 30px; clear: both; text-align: center; margin-bottom: 40px; margin: 0 auto;}
+
+/* 인천공항 추가 */
+.info_check {padding:10px 0 25px 50px; }
+.info_check p {text-align: left; color: #fff; font-size: 18px; line-height: 28px; }
+.info_check p span {font-size: 16px; color: #ada4b7}
+.info_check ul {text-align: left; padding:30px 0 0 20px;}
+.info_check ul li {color: #fff; font-size: 20px; padding-bottom: 20px; list-style-type: disc; position: relative;}
+.info_check ul li input {background:#3a2949; border:solid 1px rgba(255, 255, 255, 0.4); border-radius:6px; text-align: center; font-size:20px; font-weight: 600; color:#cbc2d3; padding:10px; margin:0 10px; width: 95px;}
+.info_check .input_position1 {position: absolute; left: 200px; top:-12px}
+.info_check .input_position2 {margin-left: 41px;}
+
+.ICN_member_box {width:710px; background-color:#f3f0f3; border: 2px solid #e0e0e0; text-align: left; padding: 35px 60px; margin: 0 auto;}
+.ICN_member_box h3 {font-size: 27px; color: #2c1742; font-weight: bold; margin-bottom: 15px;}
+.ICN_member_box p {margin: 15px 0; font-weight: normal; clear: both; }
+.ICN_member_box p span {color:#b20e47; font-weight: 600;}
+.ICN_member_box input, .ICN_member_box select {border:solid 1px #bbb; border-radius:6px; font-size:16px; color:#555; height: 40px; line-height: 22px; padding-left:12px; margin:0 10px 10px 0;}
+.ICN_member_box select {height: 44px;}
+.ICN_join {text-align: left; color: #fff; font-size: 18px; line-height: 28px; padding-left: 75px; margin-bottom:25px;}
+.ICN_member_box .button .bt_v2 {border-radius:6px; color:#fff; font-size:18px; background:#2b1242; padding:12px 78px; text-decoration: none;}
+.myoffice {position: relative;}
+.myoffice select {background:#fff; border:solid 1px rgba(255, 255, 255, 0.6); position: absolute; right: 5px; top:-30px; border-radius:6px; font-size:15px; color:#26113b; display:block; padding:12px; margin-right:20px;	width:350px;}
+.myofficeMail {position: relative;}
+.myofficeMail select {background:#fff; border:solid 1px rgba(255, 255, 255, 0.6); position: absolute; right: 5px; top:-30px; border-radius:6px; font-size:15px; color:#26113b; display:block; padding:12px; margin-right:20px;	width:230px;}
+.myofficeMail input {background:#fff; border:solid 1px rgba(255, 255, 255, 0.6); position: absolute; right: 250px; top:-30px; border-radius:6px; font-size:15px; color:#26113b; display:block; padding:12px; margin-right:20px;	width:150px;}
+
+/* 회사명 검색 레이어 */
+#shadow {width:100%; height:100%; position:fixed; background:rgba(0,0,0,0.8); top:0; left:0; z-index:999;}
+.office {width: 810px; height: 470px; background-color: #fff; border: 1px solid #999; position: fixed; left:50%; top: 50%; margin-left: -400px; margin-top: -250px; }
+.office h2 {font-size: 28px; color:#4c0e75; font-weight: 700; text-align: center; padding: 45px 0 25px 0;}
+.search {text-align: center; position: relative; margin-left: -80px;}
+.search_box {width:300px; height: 23px; font-size: 22px; color: #222; font-weight: 700; border: 3px solid #5c168b; border-radius: 5px; padding: 10px 30px;}
+.btn_search {position: absolute; width: 80px; height: 48px; background-color: #4c0e75; border:1px solid #2b1242; border-radius: 5px; color:#fff; font-size:22px; margin-left: 5px;}
+.result {height: 240px; background-color:#f3f0f7; margin-top: 38px; border-top: 1px solid #dbd5e1; padding: 20px 10px 20px 60px;}
+.result p {text-align: right; font-size: 14px; color: #555; margin-bottom: 20px; padding-right: 20px;}
+.result ul {overflow:auto; height: 200px;}
+.result li a {color:#4c0e75; font-weight: 600; font-size: 16px; display: block; padding: 18px 10px; float: left; width: 200px; margin-right: 20px; }
+.result li a:hover {font-weight: 900;}
+.result li a span {color:#555; font-weight: 400;}
+.btn_close {position: absolute;top: -460px;right: 10px;background: url("http://m.mall.ourhome.co.kr/res/mobile/img/common/pop_close.png") no-repeat 50% 0;background-size: 28px;display:inline-block;width: 28px;height: 28px;}
+.close {position:relative;}
+.close span {font-size:0px;}
+
+.ptr10 {padding-top: 15px; padding-right: 7px;}
+.pt20 {padding-top:20px;}
+.pt40 {padding-top:40px;}
+.pt90 {padding-top:90px;}
+.pb50 {padding-bottom:50px}
+.pb90 {padding-bottom:90px}
+.mb20 {margin-bottom:20px;}
+.mb30 {margin-bottom:30px;}
+.mt60 {margin-top:60px;}
+.center {text-align:center;}
+.fl {float:left;}
+.fr {float:right;}
+.bg_space {background:#402b53; height:90px;}
+.txt_y {color:#fff000;}
+.txt_small {font-size: 16px; color:#ada4b7;}
+.txt_big {font-size: 30px !important;}
+.w190 {width: 190px;}
+.w200 {width: 200px;}
+.w210 {width: 210px;}
+.w240 {width: 240px;}
+.w315 {width: 315px;}
+.w370 {width: 370px;}
+.w250 {width: 250px;}
+.w776 {width: 776px;}
+.w670 {width: 667px;}
+.bl_b {border-bottom: 1px solid #ccc;}
+.bl_b2 {border-bottom: 1px solid #7a6b87;}
+.clear {clear: both !important;}

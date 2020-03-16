@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="notice">
+
+	<resultMap id="SelectNoticeViewMap" type="java.util.HashMap"> 
+	 <result property="NOTICESEQ" column="NOTICESEQ" /> 
+	 <result property="TYPE" column="TYPE" />
+	 <result property="SUBJECT" column="SUBJECT" />	  
+	 <result property="IMG" column="IMG" />
+	 <result property="CONTENTS" column="CONTENTS" javaType="java.lang.String" jdbcType="CLOB"/> 
+	 <result property="REGDT" column="REGDT" />
+	 <result property="HITCNT" column="HITCNT" />
+	 <result property="NEXTNOTICESEQ" column="NEXTNOTICESEQ" />
+	 <result property="NEXTSUBJECT" column="NEXTSUBJECT" />
+	 <result property="PRENOTICESEQ" column="PRENOTICESEQ" />
+	 <result property="PRESUBJECT" column="PRESUBJECT" />
+	</resultMap> 
+
+
+	<select id="selectNoticeListCnt" parameterType="HashMap" resultType="int">
+		SELECT
+			COUNT(*) AS TOTAL_CNT 
+		FROM
+			HP_NOTICE
+		WHERE
+			DEL_YN = 'N'	
+			<if test="searchType == 'subject'">	 
+				and subject like '%' || #{searchKeyword} || '%'      		
+			</if>   	
+			<if test="searchType == 'contents'">	 
+				and (subject like '%' || #{searchKeyword} || '%'      
+				or contents like '%' || #{searchKeyword} || '%')	
+			</if>			
+	</select>
+    
+    <select id="selectNoticeList" parameterType="HashMap" resultType="notice">
+	    SELECT 
+	    	*
+	    FROM
+	    	(
+	    	SELECT
+	    		ROWNUM rnum, A.*
+	    	FROM
+	    		(
+		    	SELECT 
+		    		NOTICE_SEQ AS noticeSeq
+		    		,TYPE AS type
+		    		,SUBJECT AS subject
+		    		,IMG AS img
+		    		,REGDT AS sRegDt
+		    		,TO_CHAR(REGDT, 'YYYY.MM.DD') AS regDt
+		    		,HIT_CNT AS hitCnt
+		    		,CONTENTS AS contents		    		
+		    	FROM 
+		    		HP_NOTICE
+		    	WHERE
+		    		DEL_YN = 'N'
+				<if test="searchType == 'subject'">	 
+					and subject like '%' || #{searchKeyword} || '%'      		
+				</if>   	
+				<if test="searchType == 'contents'">	 
+					and (subject like '%' || #{searchKeyword} || '%'      
+					or contents like '%' || #{searchKeyword} || '%')	
+				</if>
+				ORDER BY type desc, sRegDt desc
+				) A  			
+			)
+		WHERE rnum &gt; #{include_count} and rownum &lt;= #{page_size} 	
+    </select>
+
+    <insert id="insertNotice" parameterType="HashMap">
+		INSERT INTO HP_NOTICE 
+			(NOTICE_SEQ, TYPE, SUBJECT, IMG, CONTENTS, REGDT)
+		VALUES
+			(NOTICE_SEQ.NEXTVAL, #{type}, #{subject}, #{img}, #{contents}, SYSDATE)
+	</insert>		
+	
+	<select id="selectNoticeView" parameterType="int" resultType="hashmap">
+	    SELECT
+	    	*
+	    FROM
+	    (
+		    SELECT 
+	    		NOTICE_SEQ AS noticeSeq
+	    		,TYPE AS type
+	    		,SUBJECT AS subject
+	    		,IMG AS img	    		
+	    		,TO_CHAR(REGDT, 'YYYY.MM.DD') AS regDt
+	    		,HIT_CNT AS hitCnt
+		        ,LEAD(NOTICE_SEQ,1,0) OVER (ORDER BY NOTICE_SEQ) AS nextNoticeSeq
+		        ,LEAD(SUBJECT,1,'다음글') OVER (ORDER BY NOTICE_SEQ) AS nextSubject
+		        ,LAG(NOTICE_SEQ,1,0) OVER (ORDER BY NOTICE_SEQ) preNoticeSeq
+		        ,LAG(SUBJECT,1,'이전글') OVER (ORDER BY NOTICE_SEQ) preSubject
+				,CONTENTS AS contents	   		                                                
+		    FROM 
+		    	HP_NOTICE
+		)
+		WHERE 
+			noticeSeq = #{noticeSeq}
+	</select>
+	
+	<delete id="deleteNotice" parameterType="int">
+		DELETE FROM HP_NOTICE 
+		WHERE
+			NOTICE_SEQ = #{noticeSeq}
+	</delete>	
+	
+    <update id="updateNotice" parameterType="HashMap">
+	<![CDATA[    
+		UPDATE 
+			HP_NOTICE 		
+		SET
+			TYPE = #{type}
+			,SUBJECT = #{subject}
+			,IMG = #{img}
+			,CONTENTS = #{contents}
+		WHERE						
+			NOTICE_SEQ = #{noticeSeq}		
+	]]>
+	</update>		
+</mapper>
